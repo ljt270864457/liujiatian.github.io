@@ -3,17 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>刘单纯的小窝</title>
+  <title>redis数据类型 | 刘单纯的小窝</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="热爱生活，热爱编程；人生苦短，我用Python。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="刘单纯的小窝">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="redis数据类型StringString是redis最基本的类型，value 不仅可以是 String,也可以是数字。redis中的string类型是以二进制存储的，所以存储的内容也可以是图片等各个类型的文件
+  123456789101112131415161718192021222324252627282930313233343536373839404142434445# 设置key：nam">
+<meta property="og:type" content="article">
+<meta property="og:title" content="redis数据类型">
+<meta property="og:url" content="http://yoursite.com/2016/10/11/redis数据类型/index.html">
 <meta property="og:site_name" content="刘单纯的小窝">
-<meta property="og:description" content="热爱生活，热爱编程；人生苦短，我用Python。">
+<meta property="og:description" content="redis数据类型StringString是redis最基本的类型，value 不仅可以是 String,也可以是数字。redis中的string类型是以二进制存储的，所以存储的内容也可以是图片等各个类型的文件
+  123456789101112131415161718192021222324252627282930313233343536373839404142434445# 设置key：nam">
+<meta property="og:updated_time" content="2016-10-11T14:12:40.389Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="刘单纯的小窝">
-<meta name="twitter:description" content="热爱生活，热爱编程；人生苦短，我用Python。">
+<meta name="twitter:title" content="redis数据类型">
+<meta name="twitter:description" content="redis数据类型StringString是redis最基本的类型，value 不仅可以是 String,也可以是数字。redis中的string类型是以二进制存储的，所以存储的内容也可以是图片等各个类型的文件
+  123456789101112131415161718192021222324252627282930313233343536373839404142434445# 设置key：nam">
   
     <link rel="alternate" href="/atom.xml" title="刘单纯的小窝" type="application/atom+xml">
   
@@ -62,9 +66,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-redis数据类型" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-redis数据类型" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/10/11/redis数据类型/" class="article-date">
   <time datetime="2016-10-11T14:11:58.000Z" itemprop="datePublished">2016-10-11</time>
@@ -77,8 +79,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/11/redis数据类型/">redis数据类型</a>
+    <h1 class="article-title" itemprop="name">
+      redis数据类型
     </h1>
   
 
@@ -117,70 +119,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-MongoDB运维相关" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/10/10/MongoDB运维相关/" class="article-date">
-  <time datetime="2016-10-10T15:19:15.000Z" itemprop="datePublished">2016-10-10</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/10/MongoDB运维相关/">MongoDB运维相关</a>
-    </h1>
+    <a href="/2016/10/10/MongoDB运维相关/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">MongoDB运维相关</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="数据的备份"><a href="#数据的备份" class="headerlink" title="数据的备份"></a>数据的备份</h4><p><strong>用法</strong>：mongodump -h 主机IP：端口 -d 数据库名称 -o 备份文件所在的目录<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">mkdir mongoDump</div><div class="line">mongodump -h 127.0.0.1：27017 -d test -o ./mongoDump</div></pre></td></tr></table></figure></p>
-<h4 id="数据的恢复"><a href="#数据的恢复" class="headerlink" title="数据的恢复"></a>数据的恢复</h4><p><strong>恢复整库用法</strong>：mongorestore -h 主机IP：端口 -d 数据库名称 –dir 备份文件所在目录<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># 恢复整个数据库</div><div class="line">mongorestore -h 127.0.0.1:27017 -d new_test --dir ./mongoDump/test/</div></pre></td></tr></table></figure></p>
-<p><strong>恢复一个集合的用法</strong>：mongorestore -h 主机IP：端口 -d 数据库名称 –dir 备份文件 目录下集合.bjson<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># 恢复数据库中的一个集合</div><div class="line">mongorestore -h 127.0.0.1:27017 -d new_test --dir ./mongoDump/test/books.bson</div></pre></td></tr></table></figure></p>
-<h4 id="数据导出"><a href="#数据导出" class="headerlink" title="数据导出"></a>数据导出</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mongoexport -d dbname -c collectionname -o file --type json/csv -f field</div></pre></td></tr></table></figure>
-<p>参数说明：</p>
-<ul>
-<li>-d 数据库名</li>
-<li>-c collection名</li>
-<li>-o 输出的文件名</li>
-<li>–type 输出的格式，默认为json</li>
-<li>-f 输出的字段，如果–type为csv，则需要加上 - -f “字段名”</li>
-</ul>
-<h4 id="数据导入"><a href="#数据导入" class="headerlink" title="数据导入"></a>数据导入</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mongoimport -d dbname -c collectionname --file filename --headerline --type json/csv -f field</div></pre></td></tr></table></figure>
-<p>参数说明</p>
-<ul>
-<li>-d 数据库名</li>
-<li>-c collection名</li>
-<li>–type 导入的格式,默认json</li>
-<li>-f 导入的字段名</li>
-<li>–headerline 如果导入的格式是csv，则可以使用第一行的标题作为导入的字段</li>
-<li>–file 要导入的文件</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/10/10/MongoDB运维相关/" data-id="ciu5khu3d0001h8a9y08e8k2l" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MongoDB/">MongoDB</a></li></ul>
-
-    </footer>
-  </div>
   
 </article>
-
-
-  
 
 </section>
         
